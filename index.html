@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es"> <!--la etiqueta lang sirve para establecer un idioma a la pagina web-->
+    <head>
+        <meta charset="utf-8" />
+        <!--esta etiqueta se utiliza para decirle al navegador que la pagina no solo usara letras
+        sino tambien otro tipo de caracteres, por ejemplo, emoticones, simbolos,etc-->
+        <title>VS proyect</title>
+        <meta name="description" content="esta es mi primera pagina web" />
+        <!--la etiqueta meta y lang son etiquetas que le agregan descripcion a la pagina web,
+            de esa manera resultara mas facil encontrar la  pagina-->
+        <meta name="author" content="Cacho Medina" />
+        <meta name="keywords" content="mi primer pagina web, Joaquin Medina" />
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <style>
+            .cacho{
+                background-image: url(images/N1.PNG);
+                background-size: cover;
+            }
+            section .textBox{
+                background-image: url(images/N1.PNG);
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body class="principal">
+        <div class="main">
+            <div class="cacho">
+            <section class="efecto">
+                <div class="fondo1">
+                    <h2 class="layer">Example website</h2>
+                </div>
+                <div class="textBox">
+                    <div class="fondo2">
+                        <h2 class="layer">Example website</h2>
+                    </div>
+                </div>
+            </section>
+       
+            <nav class="menu">
+                <ul>
+                    <li>Principal</li>
+                    <li>Datos</li>
+                    <li>Logros</li>
+                </ul>
+            </nav>
+            
+            </div>
+
+        <section class="seccion">
+            <article class="articulo">
+
+                <hgroup class="cabeza">
+                <h1 class="titulo">Primer articulo</h1>
+                <time datetime="24/9/2020">Jueves 24-9-2020</time>
+                </hgroup>
+
+                <p class="texte"><cite>Lorem ipsum dolor </cite>sit amet consectetur adipisicing elit.
+                Consequatur consequuntur beatae, pariatur deserunt, nesciunt dolorem
+                sunt voluptates commodi maiores aliquam dolor eum tempore assumenda vitae
+                perferendis esse, delectus est dicta.</p>
+
+                <img src="images/LUCI.jpg">
+
+                <footer class="comment">
+                    <p>comentario (0)</p>
+                </footer>
+
+                <address class="url">
+                    <a href="#" target="blank">
+                        Mas info</a>
+                </address>
+                <!--la etiqueta adress le indica al navegador que su contenido es una direccion web-->
+            </article>
+            <article class="articulo">
+
+                <hgroup class="cabeza">
+                <h1 class="titulo">Segundo articulo</h1>
+                <time datetime="24/9/2020">Jueves 24-9-2020</time>
+                </hgroup>
+
+                <p class="texte">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nobis
+                enim impedit inventore laboriosam similique,<br> magnam a expedita cum doloribus
+                dolorum voluptate recusandae minima provident saepe unde quasi quibusdam porro.</p>
+
+                <img src="images/yella.jpg">
+
+                <footer class="comment">
+                    <p>comentario (10)</p>
+                </footer>
+
+                <address class="url">
+                    <a href="#" target="blank">
+                        Mas info</a>
+                </address>
+
+            </article>
+        </section>
+        <aside class="column">
+            <blockquote cite="https://www.areatecnologia.com">
+                mensaje 1
+            </blockquote>
+            <blockquote cite="https://www.areatecnologia.com">
+                mensaje 2
+            </blockquote>
+        </aside>
+
+        <footer class="pie">
+            <p>Derechos reservados 2010 - 2020</p>
+        </footer>
+        </div>
+        <script>
+            document.addEventListener('mousemove', parallaxText);
+            function parallaxText(e){
+                this.querySelectorAll('.layer').forEach(Layer => {
+                    let x = (window.innerWidth - e.pageX * 2)/2;
+                    Layer.style.transform = `translateX(${x}px)`;
+                })
+            }
+        </script>
+    </body>
+</html>
